@@ -1,0 +1,9 @@
+.col-md-12
+  h1.text-center
+    = "Select Service"
+.col-md-6
+  = link_to account_threads_path(account_id: @account.id), class: "btn btn-primary btn--large"
+    h1.btn-text = "Mail"
+.col-md-6
+  = link_to root_path, class: "btn btn-danger btn--large"
+    h1.btn-text = "Calendar"

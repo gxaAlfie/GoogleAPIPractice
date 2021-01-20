@@ -1,0 +1,21 @@
+#sidebar {
+  min-width: 250px;
+  max-width: 250px;
+  height: 100vh;
+  text-align: center;
+  background: #eeeeff;
+  padding-top: 20px;
+
+  .sidebar-item {
+    &:hover, &:focus {
+      background-color: #eeffee;
+    }
+  }
+  .sidebar-item-header {
+    &:hover, &:focus {
+      background-color: transparent;
+    }
+  }
+}
+
+

@@ -1,0 +1,13 @@
+nav#sidebar
+  ul.nav.nav-pills.nav-stacked
+    - if @account_list.current_account.present?
+      li
+        = link_to @account_list.current_account.email, account_path(@account_list.current_account), class: "sidebar-item"
+      hr
+    li
+      a.sidebar-item-header href="#unselected-email-list" data-toggle="collapse" aria-expanded="true"
+        = fa_icon "chevron-up", text: "Accounts", class: "pull-right"
+      ul.collapse.in.nav.nav-pills.nav-stacked id="unselected-email-list"
+        - @account_list.other_accounts.each do |account|
+          li
+            = link_to account.email, account_path(account), class: "sidebar-item"
